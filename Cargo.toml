@@ -1,0 +1,24 @@
+[package]
+name = "xpttools"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/avidys/xpttools"
+description = "XPT read library in rust and cli tool to converst to CSV"
+keywords = ["XPT", "CSV", "Data Science", "Data Analysis", "Clinical Data"]
+categories = ["algorithms", "science"]
+
+[lib]
+name = "xpttools"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+thiserror = "1"
+clap = { version = "4", features = ["derive"] }
+csv = "1"
+encoding_rs = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = ["macos-private-api"] } # or your current tauri ver
