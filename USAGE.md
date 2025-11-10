@@ -28,7 +28,7 @@ encoding_rs = "0.8"  # Required for character encoding
 
 ```toml
 [dependencies]
-xpttools = { git = "https://github.com/your-repo/xpt.rs" }
+xpttools = { git = "https://github.com/avidys/xpt.rs" }
 ```
 
 ## Basic Usage

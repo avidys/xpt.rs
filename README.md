@@ -5,8 +5,8 @@ Rust library and CLI tool to read XPT v5 - SAS Transport files
 
 - **Library**: Use as a Rust crate in your projects
 - **CLI Tool**: Command-line utilities for inspection and conversion
-  - `xptcat` — print dataset metadata (variables, types, lengths, positions)
-  - `xpt2csv` — convert an XPT dataset to CSV
+  - `xpt-cat` — print dataset metadata (variables, types, lengths, positions)
+  - `xpt2-csv` — convert an XPT dataset to CSV
 
 ## Library Usage
 
@@ -33,17 +33,33 @@ let datasets = read_xpt_v5_from_bytes(&data)?;
 ```
 
 
+cargo login <your_api_token>  # from crates.io
+cargo publish --dry-run
+
+
 # Build
 cargo build --release
-
-# Inspect an XPT file
-./target/release/xpttools xptcat DM.xpt
 
 # Convert a dataset (first member) to CSV
 ./target/release/xpttools xpt2csv PC.xpt -o PC.csv
 
 # Convert a named member (if multiple)
 ./target/release/xpttools xpt2csv SDTM.xpt -d PC -o PC.csv
+
+# Show column metadata
+./target/release/xpttools xptcols DM.xpt
+
+# Show first 10 rows (default)
+./target/release/xpttools xpthead DM.xpt
+
+# Show first 20 rows
+./target/release/xpttools xpthead DM.xpt -n 20
+
+# Show first 10 rows of a specific dataset
+./target/release/xpttools xpthead SDTM.xpt -d PC
+
+# Show first 5 rows of a specific dataset
+./target/release/xpttools xpthead SDTM.xpt -d PC -n 5
 
 
 Check with R haven::read_xpt() or Python xport.v56 
