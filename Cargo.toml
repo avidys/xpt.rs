@@ -1,12 +1,14 @@
 [package]
 name = "xpttools"
-version = "0.2.1"
+version = "0.2.2"
+authors = ["Avidys LLC"]
+documentation = "https://avidys.net/xpttools"
 edition = "2021"
-license = "MIT OR Apache-2.0"
+license = "GPL-3.0"
 readme = "README.md"
 repository = "https://github.com/avidys/xpt.rs"
 description = "XPT read library in rust and cli tool to converst to CSV"
-keywords = ["XPT", "CSV", "Data Science", "Data Analysis", "Clinical Data"]
+keywords = ["XPT", "CSV", "DataAnalysis", "DataScience", "ClinicalData"]
 categories = ["algorithms", "science"]
 
 [lib]

@@ -13,25 +13,46 @@ Rust library and CLI tool to read XPT v5 - SAS Transport files
 ## CLI usage
 
 - Show column metadata
+
+```bash
 ./target/release/xpttools xptcols DM.xpt
+```
 
 - Show first 10 rows (default)
+
+```bash
 ./target/release/xpttools xpthead DM.xpt
+```
 
 - Show first 20 rows
+
+```bash
 ./target/release/xpttools xpthead DM.xpt -n 20
+```
 
 - Convert a dataset (first member) to CSV
+
+```bash
 ./target/release/xpttools xpt2csv PC.xpt -o PC.csv
+```
 
 - Convert a named member (if multiple)
+
+```bash
 ./target/release/xpttools xpt2csv SDTM.xpt -d PC -o PC.csv
+```
 
 - Show first 10 rows of a specific dataset
+
+```bash
 ./target/release/xpttools xpthead SDTM.xpt -d PC
+```
 
 - Show first 5 rows of a specific dataset
+
+```bash
 ./target/release/xpttools xpthead SDTM.xpt -d PC -n 5
+```
 
 ## Library Usage
 
