@@ -24,7 +24,7 @@ anyhow = "1.0"  # Required for error handling
 encoding_rs = "0.8"  # Required for character encoding
 ```
 
-### As a Git Dependency (if published)
+### As a Git Dependency
 
 ```toml
 [dependencies]
@@ -350,4 +350,3 @@ Common errors you might encounter:
 
 - [README.md](README.md) - Command-line tool usage
 - [TS-140 Specification](https://www.loc.gov/preservation/digital/formats/fdd/fdd000464.shtml) - Official XPT format documentation
-
